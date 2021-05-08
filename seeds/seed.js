@@ -12,12 +12,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of promptData) {
-    await Prompts.create({
-      ...prompts,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const prompts = await Prompts.bulkCreate(promptData, {
+    returning: true,
+  });
 
   process.exit(0);
 };
