@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Prompts extends Model {}
+class Blogs extends Model {}
 
-Prompts.init(
+Blogs.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,14 +12,23 @@ Prompts.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    prompt_title: {
+    blog_text: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
     },
-    prompt_text: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
+    },
+    prompt_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'prompts',
+          key: 'id',
+        },
     },
   },
   {
@@ -27,8 +36,8 @@ Prompts.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'prompts',
+    modelName: 'blogs',
   }
 );
 
-module.exports = Prompts;
+module.exports = Blogs;
