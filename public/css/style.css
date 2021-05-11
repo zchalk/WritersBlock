@@ -1,10 +1,18 @@
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+body { font-family:  'Crimson Text', serif; }
+
+main {
+  display:flex;
+  justify-content: center;
+  padding: 200px;
+}
 
 form { 
   width: 200px;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .scene {
   width: 200px;
@@ -23,22 +31,22 @@ form {
   transition: transform 1s;
 }
 
-.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
-.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
-.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
-.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
-.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
-.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+.cube.show-front  { transform: translateZ(100px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(100px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(100px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(100px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(100px) rotateX(  90deg); }
 
 .cube__face {
   position: absolute;
   width: 200px;
   height: 200px;
   /* border: 2px solid black; */
-  line-height: 200px;
-  font-size: 40px;
-  font-weight: bold;
-  color: rgb(126, 16, 16);
+  /* line-height: 200px; */
+  /* font-size: 40px; */
+  /* font-weight: bold; */
+  color: white;
   text-align: center;
   background-image: url(wood1.jpeg);
   background-position: center;
