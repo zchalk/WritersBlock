@@ -10,6 +10,15 @@ router.get('/', async (req, res) => {
     }
 });
 
+
+router.get('/profile', async (req, res) => {
+    try {
+        res.render('profile');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/prompt/:id', async (req, res) => {
     try{ 
         const promptData = await Prompts.findByPk(req.params.id);
