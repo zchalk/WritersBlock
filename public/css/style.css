@@ -2,7 +2,7 @@
 
 body { font-family:  'Crimson Text', serif; }
 
-main {
+#main {
   display:flex;
   justify-content: center;
   padding: 200px;
