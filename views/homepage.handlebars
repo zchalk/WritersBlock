@@ -1,3 +1,4 @@
+<div id="main">
 <div class="scene">
         <div class="cube flip-scale-down-ver">
           <div class="cube__face cube__face--front">
@@ -15,10 +16,22 @@
                 <label for="signUpPassword" class="form-label">Password</label>
                 <input type="password" class="form-control" id="signUpPassword">
               </div>
-              <button type="submit" class="btn btn-primary signUpSubmit">Submit</button>
+              <button id="signUpBtn" type="submit" class="btn btn-primary signUpSubmit">Submit</button>
             </form>
           </div>
-          <div class="cube__face cube__face--right">right</div>
+          <div class="cube__face cube__face--right">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="loginEmail">
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword">
+              </div>
+              <button id="loginBtn" type="submit" class="btn btn-primary signUpSubmit">Submit</button>
+            </form>
+          </div>
           <div class="cube__face cube__face--left">left</div>
           <div class="cube__face cube__face--top">top</div>
           <div class="cube__face cube__face--bottom">bottom</div>
@@ -44,5 +57,5 @@
           <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
         </label>
       </p>
-      
+</div>
   <script src= "/js/homepage.js"></script>
