@@ -3,6 +3,7 @@ const { User, Prompts } = require("../models");
 
 const userData = require('./userData.json');
 const promptData = require('./promptData.json');
+// const blogData = require('./blogData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
