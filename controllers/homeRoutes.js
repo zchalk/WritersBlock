@@ -14,7 +14,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-
 router.get('/profile', async (req, res) => {
     try {
         res.render('profile', {
@@ -25,7 +24,7 @@ router.get('/profile', async (req, res) => {
     }
 });
 
-router.get('/prompt/:id', async (req, res) => {
+router.get('/post', async (req, res) => {
     
     const [results, metadata] = await sequelize.query("SELECT COUNT(*) FROM prompts;");
     let randNum = getRandomInt(results[0]['COUNT(*)']);
@@ -42,5 +41,6 @@ router.get('/prompt/:id', async (req, res) => {
           res.status(500).json(err);
       };     
   });
+
 
 module.exports = router;
