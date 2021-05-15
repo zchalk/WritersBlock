@@ -6,7 +6,9 @@ const sequelize = require('../config/connection');
 
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage');
+        res.render('homepage', {
+            logged_in: req.session.loggedIn
+        });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -15,7 +17,9 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', async (req, res) => {
     try {
-        res.render('profile');
+        res.render('profile', {
+            logged_in: req.session.loggedIn
+        });
     } catch (err) {
         res.status(500).json(err);
     }
