@@ -2,7 +2,7 @@
 
 body { font-family:  'Crimson Text', serif; }
 
-#main {
+main {
   display:flex;
   justify-content: center;
   padding: 200px;
@@ -14,11 +14,11 @@ form {
   display: flex;
   flex-wrap: wrap;
 }
-.scene {
+/* .scene {
   width: 200px;
   height: 200px;
   /* border: 1px solid #CCC; */
-  margin: 80px;
+  /* margin: 80px;
   perspective: 400px;
 }
 
@@ -41,12 +41,12 @@ form {
 .cube__face {
   position: absolute;
   width: 200px;
-  height: 200px;
+  height: 200px; */
   /* border: 2px solid black; */
   /* line-height: 200px; */
   /* font-size: 40px; */
   /* font-weight: bold; */
-  color: white;
+  /* color: white;
   text-align: center;
   background-image: url(wood1.jpeg);
   background-position: center;
@@ -61,20 +61,6 @@ form {
 .cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
 
 label { margin-right: 10px; }
-
-.header{
-  align-items: center;
-  padding: 50px;
-  position:absolute;
-  top:0;
-}
-
-.options {
-  align-items: center;
-  position: absolute;
-  padding: 100px;
-  top: 50px;
-}
 
 @-webkit-keyframes flip-scale-down-ver {
     0% {
@@ -103,4 +89,4 @@ label { margin-right: 10px; }
       -webkit-transform: scale(1) rotateY(-180deg);
               transform: scale(1) rotateY(-180deg);
     }
-  }
+  } */ */

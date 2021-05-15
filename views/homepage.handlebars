@@ -1,12 +1,15 @@
-<div id="main">
 <div class="scene">
         <div class="cube flip-scale-down-ver">
           <div class="cube__face cube__face--front">
-              <button class="singUpTurn"></button>
-              <button class="logInTurn"></button>
+              <button id= "loginTurn" type="button" class="btn btn-outline-primary" data-mdb-ripple-color="dark">
+              Log In
+              </button>
+              <button id= "signUpTurn" type="button" class="btn btn-outline-primary"  data-mdb-ripple-color="dark">
+              Sign Up
+              </button>
           </div>
           <div class="cube__face cube__face--back">
-            <form>
+            <form class="signUpForm">
               <div class="mb-3">
                 <label for="signUpEmail" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp">
@@ -20,7 +23,7 @@
             </form>
           </div>
           <div class="cube__face cube__face--right">
-            <form>
+            <form class="loginForm">
               <div class="mb-3">
                 <label for="loginEmail" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="loginEmail">
@@ -29,10 +32,10 @@
                 <label for="loginPassword" class="form-label">Password</label>
                 <input type="password" class="form-control" id="loginPassword">
               </div>
-              <button id="loginBtn" type="submit" class="btn btn-primary signUpSubmit">Submit</button>
+              <button id="loginBtn" type="submit" class="btn btn-primary loginSubmit">Submit</button>
             </form>
           </div>
-          <div class="cube__face cube__face--left">left</div>
+          {{!-- <div class="cube__face cube__face--left">left</div>
           <div class="cube__face cube__face--top">top</div>
           <div class="cube__face cube__face--bottom">bottom</div>
         </div>
@@ -56,6 +59,5 @@
         <label>
           <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
         </label>
-      </p>
-</div>
+      </p> --}}
   <script src= "/js/homepage.js"></script>
