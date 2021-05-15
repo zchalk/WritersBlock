@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Prompts } = require('../models');
+const { Blogs } = require('../models');
 const withAuth = require('../utils/auth');
 let getRandomInt = require('../utils/random');
 const sequelize = require('../config/connection');
@@ -16,7 +17,11 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', async (req, res) => {
     try {
+        const blogData = await Blogs.findAll();
+        const blogs = blogData.get({plain: true});
+        console.log(blogData,blogs)
         res.render('profile', {
+            blogs,
             logged_in: req.session.loggedIn
         });
     } catch (err) {
@@ -36,7 +41,7 @@ router.get('/post', async (req, res) => {
             return;
         }
         const p = promptData.get({ plain: true });
-        res.render('prompt', p);
+        res.render('post', p);
       } catch (err) {
           res.status(500).json(err);
       };     
