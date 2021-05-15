@@ -36,7 +36,7 @@ router.get('/post', async (req, res) => {
             return;
         }
         const p = promptData.get({ plain: true });
-        res.render('prompt', p);
+        res.render('post', p);
       } catch (err) {
           res.status(500).json(err);
       };     

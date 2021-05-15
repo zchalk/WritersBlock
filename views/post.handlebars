@@ -1,15 +1,16 @@
 <div class="prompt col-md-5">
+  <h2>{{prompt_title}}</h2>
   <p>
-    {{prompt_title}}
     {{prompt_text}}
   </p>
   <button id="r"></button>
 
-  <form>
+  <form class='blog-form'>
   <div class="mb-3">
-    <input type="text" class="form-control">
+    <label for="blog-input">Password:</label>
+    <input type="text" class="form-control" id='blog-input'>
   </div>
-  <button id="blog_input" type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="blog-button">Submit</button>
   </form>
 </div>
-<script></script>
+<script src='/js/post.js'></script>
