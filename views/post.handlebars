@@ -1,15 +1,16 @@
 <div class="prompt col-md-5">
-  <h2>{{prompt_title}}</h2>
+  <div class="prompt col-md-5 promptDiv">
+  <h2 id="promptTitle">{{prompt_title}}</h2>
+  <br>
   <p>
     {{prompt_text}}
   </p>
-  <button id="r"></button>
-
+  <button class="animatedBtn">refresh</button>
+</div>
   <form class="blog-form">
-  <div class="mb-3">
-    <input id="blog-input" type="text" class="form-control">
-  </div>
-  <button  type="submit" class="btn btn-primary">Submit</button>
+  
+    <textarea id="blog-input" name="text" class="form-control" autofocus></textarea>
+  <button  type="submit" class="animatedBtn">Submit</button>
   </form>
 </div>
 <script src="/js/post.js"></script>

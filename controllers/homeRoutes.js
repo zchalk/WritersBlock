@@ -52,7 +52,10 @@ router.get('/post', async (req, res) => {
             return;
         }
         const p = promptData.get({ plain: true });
-        res.render('post', p);
+        res.render('post', {
+            ...p,
+            logged_in: req.session.loggedIn
+        });
       } catch (err) {
           res.status(500).json(err);
       };     

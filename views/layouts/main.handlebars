@@ -19,11 +19,12 @@
         </div>
         <nav>
             {{#if logged_in}}
-            <a href="/profile">profile</a>
-            <a href="/post">post</a>
-            <a href="/logOut">log out</a>
+            <a class="navLink" href="/profile">profile</a>
+            <a class="navLink" href="/post">post</a>
+            <a class="navLink" href="/logOut">log out</a>
             {{/if}}
         </nav>
+        
     </header>
     <main>
         {{{body}}}
