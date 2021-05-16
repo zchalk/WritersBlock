@@ -16,14 +16,12 @@ form {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 .navLink {
   text-decoration: none;
-  margin: 2vw;
+  padding: 0.5vw;
   color: black;
-}
-.navLink:hover {
-  text-decoration: underline;
 }
 textarea {
   font-family:  'Crimson Text', serif;
