@@ -5,7 +5,6 @@ body { font-family:  'Crimson Text', serif; }
 main {
   display:flex;
   justify-content: center;
-  padding: 200px;
 }
 
 form { 
@@ -13,6 +12,81 @@ form {
   height: 200px;
   display: flex;
   flex-wrap: wrap;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.navLink {
+  text-decoration: none;
+  margin: 2vw;
+  color: black;
+}
+.navLink:hover {
+  text-decoration: underline;
+}
+textarea {
+  font-family:  'Crimson Text', serif;
+  font-size: medium;
+  min-width: 75vw;
+  min-height: 65vh;
+}
+.promptDiv {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 75vw;
+
+}
+#promptTitle {
+  /* text-align: center; */
+  width: 100%;
+  margin-bottom: 0;
+}
+.animatedBtn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family:  'Crimson Text', serif;
+  margin: 1em 0.8em
+}
+.animatedBtn::after, .animatedBtn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px
+}
+.animatedBtn::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: black;
+  border-right-color: black;
+  }
+
+.animatedBtn::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: black;
+  border-left-color: black;
+}
+.animatedBtn:hover:after,
+.animatedBtn:hover:before {
+  border-bottom-color: black;
+  border-right-color: black;
+  border-top-color: black;
+  border-left-color: black;
+  width: 100%;
+  height: 100%;
 }
 /* .scene {
   width: 200px;
@@ -89,4 +163,4 @@ label { margin-right: 10px; }
       -webkit-transform: scale(1) rotateY(-180deg);
               transform: scale(1) rotateY(-180deg);
     }
-  } */ */
+  } */
