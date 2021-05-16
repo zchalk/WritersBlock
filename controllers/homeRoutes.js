@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Prompts } = require('../models');
-const { Blogs } = require('../models');
+const { Prompts, Blogs, User } = require('../models');
 const withAuth = require('../utils/auth');
 let getRandomInt = require('../utils/random');
 const sequelize = require('../config/connection');
@@ -17,11 +16,23 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', async (req, res) => {
     try {
-        const blogData = await Blogs.findAll();
-        const blogs = blogData.get({plain: true});
-        console.log(blogData,blogs)
+        console.log(req.session.userID)
+        const userData = await User.findByPk(req.session.userID, {
+            include:[
+                // {
+                //     model: Prompts, 
+                //     attributes: ['id', 'prompt_title', 'prompt_text'],
+                // },
+                {
+                    model: Blogs 
+                    // attributes: ['id', 'blog_text', 'prompt_id', 'user_id'],
+                }
+            ]   
+        });
+        const userStuff = userData.get({plain: true});
+        console.log(userStuff)
         res.render('profile', {
-            blogs,
+            ...blogs,
             logged_in: req.session.loggedIn
         });
     } catch (err) {

@@ -1,6 +1,7 @@
 [
     {
-        "blog_text": "This is test blog  number 1."
+        "blog_text": "This is test blog  number 1.",
+        "user_id": "4"
     },
     {
         "blog_text": "This is test blog  number 2."
