@@ -1,17 +1,17 @@
-var cube = document.querySelector('.cube');
-var radioGroup = document.querySelector('.radio-group');
-var currentClass = '';
+// var cube = document.querySelector('.cube');
+// var radioGroup = document.querySelector('.radio-group');
+// var currentClass = '';
 
-function changeSide() {
-  var checkedRadio = radioGroup.querySelector(':checked');
-  var showClass = 'show-' + checkedRadio.value;
-  console.log(showClass)
-  if ( currentClass ) {
-    cube.classList.remove( currentClass );
-  }
-  cube.classList.add( showClass );
-  currentClass = showClass;
-}
+// function changeSide() {
+//   var checkedRadio = radioGroup.querySelector(':checked');
+//   var showClass = 'show-' + checkedRadio.value;
+//   console.log(showClass)
+//   if ( currentClass ) {
+//     cube.classList.remove( currentClass );
+//   }
+//   cube.classList.add( showClass );
+//   currentClass = showClass;
+// }
 
 const signUpSubmit = async (event) => {
   event.preventDefault();
@@ -58,8 +58,8 @@ const loginSubmit = async (event) => {
 document.querySelector('.signUpForm').addEventListener('submit', signUpSubmit);
 document.querySelector('.loginForm').addEventListener('submit', loginSubmit);
 
-changeSide();
+// changeSide();
 
-radioGroup.addEventListener( 'change', changeSide );
+// radioGroup.addEventListener( 'change', changeSide );
 
 // 

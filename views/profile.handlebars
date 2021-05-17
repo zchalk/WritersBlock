@@ -1,17 +1,17 @@
 <h2 class= "header">Hello, you!</h2>
 
-
+<div class="main">
 {{#if blogs.length}}
-  <div class="col-md-6 project-list">
+  <div class="pastPosts">
 
     <h3>The Past:</h3>
     {{#each blogs}}
-    <div class="row mb-2">
-      <div class="col-md-8">
+    <div class="eachBlog">
+      <div class="eachBlogPrompt">
         <h4>{{prompt.prompt_title}}</h4>
         <h5>{{prompt.prompt_text}}</h5>
       </div>
-      <div class="col-md-4">
+      <div class="eachBlogText">
         <p>{{blog_text}}</p>
       </div>
     </div>
@@ -20,6 +20,6 @@
   {{/if}}
 
 
-  <button id="postDirectBtn">Start Writing</button>
-
+  <a href="/post" id="postDirectBtn" class="animatedBtn navLink">Start Writing</a>
+</div>
 <script src="/js/profile.js"></script>
