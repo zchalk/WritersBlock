@@ -10,5 +10,21 @@
     {
         "prompt_title": "A Long Night",
         "prompt_text": "It's 2 a.m. and you're heading home, reflecting on the night you just had."
+    },
+    {
+        "prompt_title": "The Blackout",
+        "prompt_text": "Write a story set in a city where the power suddenly goes out, leaving everyone in darkness."
+    },
+    {
+        "prompt_title": "Mother Nature",
+        "prompt_text": "Write about a community that worships Mother Nature."
+    },
+    {
+        "prompt_title": "The Tree",
+        "prompt_text": "Write a story that weaves together multiple lives through their connection to a particular tree."
+    },
+    {
+        "prompt_title": "Finis de principio",
+        "prompt_text": "Start your story with an ending and work backward toward the beginning."
     }
 ]

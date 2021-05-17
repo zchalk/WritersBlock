@@ -61,6 +61,15 @@ router.get('/post', async (req, res) => {
           res.status(500).json(err);
       };     
   });
+  router.get('/prompt', async (req, res) => {
+    try {
+        res.render('prompt', {
+            logged_in: req.session.loggedIn
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 
 module.exports = router;
