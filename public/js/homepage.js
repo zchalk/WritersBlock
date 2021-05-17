@@ -4,7 +4,6 @@ const signUpSubmit = async (event) => {
 
   const email = document.querySelector('#signUpEmail').value.trim();
   const password = document.querySelector('#signUpPassword').value.trim();
-  console.log(email, password);
 
   if (email && password) {
 
@@ -35,7 +34,6 @@ const loginSubmit = async (event) => {
       });
       if (response.ok) {
           document.location.replace('/profile');
-        console.log("It worked")
       } else {
           alert(response.statusText);
       }
