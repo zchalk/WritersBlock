@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.userID, {
             include:[
@@ -40,7 +40,7 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
-router.get('/post', withAuth, async (req, res) => {
+router.get('/post', async (req, res) => {
     
     const [results, metadata] = await sequelize.query("SELECT COUNT(*) FROM prompts;");
     let randNum = getRandomInt((results[0]['COUNT(*)'])-1);
@@ -60,7 +60,7 @@ router.get('/post', withAuth, async (req, res) => {
           res.status(500).json(err);
       };     
   });
-  router.get('/prompt', withAuth, async (req, res) => {
+  router.get('/prompt', async (req, res) => {
     try {
         res.render('prompt', {
             logged_in: req.session.loggedIn
