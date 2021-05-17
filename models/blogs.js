@@ -12,7 +12,7 @@ Blogs.init(
       autoIncrement: true,
     },
     blog_text: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     user_id: {

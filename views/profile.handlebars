@@ -1,22 +1,24 @@
 <h2 class= "header">Hello, you!</h2>
 
 
-{{!-- {{#if blogs.length}} --}}
+{{#if blogs.length}}
   <div class="col-md-6 project-list">
 
     <h3>The Past:</h3>
-    {{!-- {{#each blogs as |blog|}} --}}
+    {{#each blogs}}
     <div class="row mb-2">
       <div class="col-md-8">
-        {{!-- <h4>{{prompts(blog.prompt_id)}}</h4> --}}
+        <h4>{{prompt.prompt_title}}</h4>
+        <h5>{{prompt.prompt_text}}</h5>
       </div>
       <div class="col-md-4">
         <p>{{blog_text}}</p>
       </div>
     </div>
-    {{!-- {{/each}} --}}
+    {{/each}}
   </div>
-  {{!-- {{/if}} --}}
+  {{/if}}
+
 
   <button id="postDirectBtn">Start Writing</button>
 
