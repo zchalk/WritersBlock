@@ -19,20 +19,21 @@ router.get('/profile', async (req, res) => {
         console.log(req.session.userID)
         const userData = await User.findByPk(req.session.userID, {
             include:[
-                // {
-                //     model: Prompts, 
-                //     attributes: ['id', 'prompt_title', 'prompt_text'],
-                // },
                 {
-                    model: Blogs 
-                    // attributes: ['id', 'blog_text', 'prompt_id', 'user_id'],
+                    model: Blogs, 
+                    include:[
+                        {
+                            model: Prompts 
+
+                        },]
                 }
             ]   
         });
         const userStuff = userData.get({plain: true});
-        console.log(userStuff)
+        const blogs = userStuff.blogs;
+        console.log(blogs)
         res.render('profile', {
-            ...blogs,
+            blogs,
             logged_in: req.session.loggedIn
         });
     } catch (err) {

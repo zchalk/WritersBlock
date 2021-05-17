@@ -6,7 +6,9 @@ router.post('/', async (req, res) => {
     try {
         // use sequelize to create a new psot and enter into the table
          const newBlog = await Blogs.create({
-            blog_text: req.body.blog
+            blog_text: req.body.blog,
+            user_id: req.session.userID,
+            prompt_id: req.body.prompt_id
         });
 
     } catch (err) {

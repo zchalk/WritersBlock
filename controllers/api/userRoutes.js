@@ -10,6 +10,7 @@ router.post('/create', async (req, res) => {
         req.session.save(() => {
             req.session.userID = userStuff.id;
             req.session.loggedIn = true;
+            res.json({ user: userStuff, message: 'Hey! Welcome back, always good to see a familiar face!' })
         });
     } catch (err) {
         console.log(err);
