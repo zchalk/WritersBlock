@@ -44,7 +44,7 @@ router.get('/profile', async (req, res) => {
 router.get('/post', async (req, res) => {
     
     const [results, metadata] = await sequelize.query("SELECT COUNT(*) FROM prompts;");
-    let randNum = getRandomInt(results[0]['COUNT(*)']);
+    let randNum = getRandomInt((results[0]['COUNT(*)'])-1);
 
     try{ 
         const promptData = await Prompts.findByPk(randNum);
