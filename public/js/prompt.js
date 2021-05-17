@@ -3,7 +3,6 @@ const submitPrompt = async (event) => {
 
     const prompt_title = document.querySelector('#subTitle').value.trim();
     const prompt_text = document.querySelector('#subText').value.trim();
-    console.log(prompt_title, prompt_text)
 
     if (prompt_title && prompt_text) {
         const response = await fetch('/api/blogposts/prompt', {

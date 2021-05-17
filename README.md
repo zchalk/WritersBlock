@@ -12,7 +12,7 @@ Github Repository: https://github.com/zchalk/WritersBlock
 
 Deployed: https://writers--block.herokuapp.com/ 
 
-![writers_block](https://user-images.githubusercontent.com/77131387/118372637-b6aa7d80-b580-11eb-9e14-a897c05c91ed.png)
+![writers_block](public/images/writersblock.png)
 
 
 ## User Story
