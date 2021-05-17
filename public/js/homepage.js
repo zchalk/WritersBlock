@@ -15,7 +15,7 @@ const signUpSubmit = async (event) => {
       if (response.ok) {
           document.location.replace('/profile');
       } else {
-          alert(response.statusText);
+          alert(response.json.message);
       }
   }};
 
@@ -35,7 +35,7 @@ const loginSubmit = async (event) => {
       if (response.ok) {
           document.location.replace('/profile');
       } else {
-          alert(response.statusText);
+          alert(response.status);
       }
   }};
 

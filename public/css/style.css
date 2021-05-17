@@ -4,6 +4,12 @@
  }
  h1 { 
    font-size: xxx-large;
+   color: black;
+   font-family:  'Crimson Text', serif;
+ }
+ .type {
+   text-decoration: none;
+   font-family:  'Crimson Text', serif;
  }
  h4, h5 {
    margin: 0;
