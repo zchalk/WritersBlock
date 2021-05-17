@@ -5,6 +5,9 @@
  h1 { 
    font-size: xxx-large;
  }
+ h4, h5 {
+   margin: 0;
+ }
 
 .main {
   display:flex;
@@ -13,12 +16,10 @@
 
 form { 
   width: 200px;
-  /* height: 200px; */
   display: flex;
   flex-wrap: wrap;
 }
 .formDiv {
-  /* margin: auto; */
   margin-top: 10vh;
 }
 #emailHelp {
@@ -30,10 +31,16 @@ label {
 .promptForm {
   margin-top: 20vh;
 }
+.blogTextPast {
+  font-size: large;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+.header {
+  margin: 0;
 }
 .thePast {
   font-size: x-large;
